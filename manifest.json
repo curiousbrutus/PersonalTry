@@ -1,0 +1,26 @@
+{
+   "manifest_version": 3,
+   "name": "TextEditorEBG",
+   "version": "1.0",
+   "description": "TextEditorEBG is a Chrome extension that allows you to copy text from videos, photos, and PDFs with ease.",
+   "permissions": ["activeTab"],
+   "icons": {
+      "512": "icon.png"
+   },
+   "content_scripts": [
+      {
+         "matches": ["<all_urls>"],
+         "js": ["content.js"]
+      }
+   ],
+   "background": {
+      "service_worker": "background.js"
+   },
+   "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+         "512": "icon.png"
+      }
+   }
+ }
+ 
